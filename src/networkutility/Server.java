@@ -9,6 +9,8 @@ import java.io.InputStream;
 import java.net.Socket;
 import java.nio.ByteBuffer;
 
+import static utility.LogWriter.write;
+
 public class Server {
     private static int PORT = 2123;
     private static String HOST = "localhost";
@@ -29,7 +31,7 @@ public class Server {
 
                 File file = new File(FOLDER + "/" + fileName);
                 if (file.exists() && file.isFile()) {
-                    System.out.println("This file is already exist in the folder"); // Прерывание из за совпадении имени только при первом вхождении
+                    write(1); // Прерывание из за совпадении имени только при первом вхождении
                     break;
                 }
                 TextStructure.putData(fileName);
@@ -57,6 +59,7 @@ public class Server {
                     exc.printStackTrace();
                 }
                 }
+            write(0);
             }
           catch(IOException exc){
                 exc.printStackTrace();

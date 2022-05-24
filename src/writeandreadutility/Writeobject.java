@@ -5,6 +5,8 @@ import utility.TextStructure;
 import java.io.*;
 import java.util.ArrayList;
 
+import static utility.LogWriter.write;
+
 public class Writeobject {
     public static void writingfile(ArrayList ar) {
 
@@ -15,6 +17,7 @@ public class Writeobject {
 
             oos.writeObject(ar);
             oos.close();
+            write(3);
         }catch (IOException e){
             e.printStackTrace();
         }

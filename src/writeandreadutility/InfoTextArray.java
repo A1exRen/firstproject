@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 
+import static utility.LogWriter.write;
+
 public class InfoTextArray {
 
 
@@ -16,6 +18,7 @@ public class InfoTextArray {
             Integer k = ar.size()+1;//Присваивание Id новому названию текста
             TextStructure obj = new TextStructure(k,t,curtime);
             ar.add(obj);
+            write(2);
             System.out.println(ar);
             return ar;
 
