@@ -29,7 +29,7 @@ public class TextStructure implements Serializable {
     public static void putData(String textName){
         System.out.println(textName);
         ArrayList<TextStructure> textArray = new ArrayList<TextStructure>();
-        textArray = ReadObject.readingfile();//Чтения массива в файл
+        textArray = ReadObject.readingfile();//Чтения массива из файла
         textArray = InfoTextArray.setData(textArray, textName); // Добавление названия текста и даты в массив
         Writeobject.writingfile(textArray); //Запись массива в файл
 

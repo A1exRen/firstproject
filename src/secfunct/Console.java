@@ -61,8 +61,13 @@ public class Console {
                     AnalyzerFunct.sorttext(userContext.getInputText());
                     break;
 
-                case WRITE:
+                case FIND_THE_TEXT_ID:
+                    System.out.println("Write the ID of text which u wanna find");
+                    String id = scannerInputText.nextLine();
+                    AnalyzerFunct.printid(Integer.valueOf(id)) ;
+                    break;
 
+                case WRITE:
                     System.out.print("Input a text: ");
                     String text = scannerInputText.nextLine();
                     System.out.print("Add path: ");

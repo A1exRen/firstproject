@@ -13,7 +13,8 @@ public enum ComList {  // enum - класс с перечислением кон
     NUMBER_OF_SYMBOLS("numsym", "To find the word"),
     SORTING_BY_NUM_OF_SYM("srtfsym","Sorting text by number of symbols"),
     EXIT("exit", "Exit from applications"),
-    WRITE("wr","write to file");
+    WRITE("wr","write to file"),
+    FIND_THE_TEXT_ID("ti","To find textname");
 
 
     private String description;

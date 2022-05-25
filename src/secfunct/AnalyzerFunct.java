@@ -1,10 +1,15 @@
 package secfunct;
 
+import utility.TextStructure;
+import writeandreadutility.ReadObject;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
+import static java.awt.SystemColor.info;
 
 public class AnalyzerFunct {
     private static Pattern pattern; /* объекта класса Pattern*/
@@ -90,6 +95,20 @@ public class AnalyzerFunct {
             }
             System.out.println("There are: " + i + " matches\n" + delimiter);
         }
+    }
+
+    public static void printid(Integer id) {
+        ArrayList<TextStructure> textArray = new ArrayList<TextStructure>();
+        textArray = ReadObject.readingfile();//Чтения массива из файла
+        System.out.println(textArray);
+        for (TextStructure obj : textArray) {
+            /*if (obj.Id == id) {  // Не могу выставить public для Id т.к. при чтении записи выводит ошибку связанную с чтением массива из файла. Что делать?
+                System.out.println(obj);
+                break;
+            }*/
+
+        }
+
     }
 
     public static void sorttext(String inputText) {

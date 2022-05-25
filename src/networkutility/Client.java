@@ -1,4 +1,5 @@
 package networkutility;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.OutputStream;
@@ -6,8 +7,6 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.net.ServerSocket;
 import java.net.Socket;
-
-
 
 
 public class Client {
@@ -41,7 +40,6 @@ public class Client {
                         out.write(buf.array());
 
 
-
                         try (FileInputStream in = new FileInputStream(file)) {
                             // Читаем файл блоками по килобайту
                             byte[] data = new byte[1024];
@@ -50,18 +48,15 @@ public class Client {
                                 // И отправляем в сокет
                                 out.write(data);
                             }
-                        }
-                        catch(IOException exc) {
+                        } catch (IOException exc) {
                             exc.printStackTrace();
                         }
                     }
-                }
-                catch(IOException exc) {
+                } catch (IOException exc) {
                     exc.printStackTrace();
                 }
             }
-        }
-        catch(IOException exc) {
+        } catch (IOException exc) {
             exc.printStackTrace();
         }
     }
