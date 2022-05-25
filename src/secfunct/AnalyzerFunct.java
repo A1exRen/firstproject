@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+
 import static java.awt.SystemColor.info;
 
 public class AnalyzerFunct {
@@ -100,12 +101,11 @@ public class AnalyzerFunct {
     public static void printid(Integer id) {
         ArrayList<TextStructure> textArray = new ArrayList<TextStructure>();
         textArray = ReadObject.readingfile();//Чтения массива из файла
-        System.out.println(textArray);
         for (TextStructure obj : textArray) {
-            /*if (obj.Id == id) {  // Не могу выставить public для Id т.к. при чтении записи выводит ошибку связанную с чтением массива из файла. Что делать?
+            if (obj.getid() == id) {  // Не могу выставить public для Id т.к. при чтении записи выводит ошибку связанную с чтением массива из файла. Что делать? Исправил.
                 System.out.println(obj);
                 break;
-            }*/
+            }
 
         }
 
